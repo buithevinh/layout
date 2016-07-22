@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Boilerplate</title>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+
+		<style type="text/css">
+			div.input {
+		  		background-color: #73ad21 ;
+		  		width: 100px;
+		  		border: 1px solid green;
+  			}
+  			.background{
+  				background-color: #73ad21;
+  				width: 400px;
+  				height: 400px;
+  				position: relative;
+  			}
+  			.background li{
+  				position: absolute;
+  				width: 100%;
+  				text-align: center;
+  				color: #fff;
+  				padding: 10px;
+  				transition-timing-function: ease-in;
+  				animation-direction: unset;
+  				-webkit-animation-fill-mode: forwards;
+  				bottom: 0px;
+  			}
+  			.background:hover li{
+  				-webkit-animation-name: example;
+  				-webkit-animation-duration: 2s;
+  				background-color: #fff;
+  				color: #000;
+  			}
+  			.slider{
+  				position: relative;
+  				width: 720px;
+  				height: 360px;
+  				
+  			}
+  			.li-slider1{
+  				position: absolute;
+  				width: 100%;
+  				height: 100%;
+  				background-color: #ef672f;
+  				-webkit-animation-name: example1;
+  		
+  			}
+  			.li-slider2{
+
+  				position: absolute;
+  				width: 100%;
+  				height: 100%;
+				background-color: #73ad21;
+				-webkit-animation-name: example1;
+				
+			   
+  			}
+  			.li-slider3{
+  				position: absolute;
+  				width: 100%;
+  				height: 100%;
+  				background-color: #009688; 
+  				-webkit-animation-name: example1;
+  				
+  				
+  			
+  			}
+  			@-webkit-keyframes example{
+  				0%{bottom:0px; }
+  				75% {bottom: 90%;}
+  				100%{ bottom: 45%; }
+  			}
+  			@-webkit-keyframes example1{
+  				from{left: 0px;}
+  				
+  				to{left: 720px;}
+  			}
+		</style>
+			<div class="btn">Go</div>
+			<div class="input"> hello</div>
+			<div class="background">
+				<li class='li'> hover</li>
+			</div>
+
+			<div class="slider">
+				<li class="li-slider1">
+					Slider1
+				</li>
+				<li class="li-slider2">
+					slider2
+				</li>
+				<li class="li-slider3">
+					slider3
+				</li>
+			</div>
+		<script>
+			$('.btn').on('click',function(){
+				$('.input').animate({
+					width: '300px',
+					opacity: '0.5',
+					marginLeft:'30px',
+					fontSize:  '16px',
+					borderWidth:'10px'
+				},1500);
+
+			});
+			$('.input').on('blur',function(){
+				 alert( "Handler for .blur() called." );
+			})
+		</script>
+	</body>
+</html>
