@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Nested Rules</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css" />
+   <script type="text/javascript" src='https://code.jquery.com/jquery-1.10.2.js'></script>
+</head>
+<body>
+   <div class="container">
+   <h1>First Heading</h1>
+   <p>LESS is a dynamic style sheet language that extends the capability of CSS.</p>
+   <div id= "header" class="myclass">
+   <h1 class="logo">Second Heading</h1>
+      <p class='test'> sadasdada</p>
+   <p>LESS enables customizable, manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site. manageable and reusable style sheet for web site.</p>
+
+   </div>
+   </div>
+
+<table border="1">
+  <tr><td>TD #0</td><td>TD #1</td><td>TD #2</td></tr>
+  <tr><td>TD #3</td><td>TD #4</td><td>TD #5</td></tr>
+  <tr><td>TD #6</td><td>TD #7</td><td>TD #8</td></tr>
+</table>
+<p> click me</p>
+<button> click trigger</button>
+ <button> trigger</button>
+<h3>ABC</h3>
+<input id="aaa" name="new-man ">
+<input name="milkman">
+<input id="letterman" name="new-letterman">
+<input name="newmilk">
+<input type="" name="aaa">
+<label id='sss' name='label'>ABCD</label>
+<label id='sss' name='label'>ABCD</label>
+<label id='sss' name='label'>ABCD</label>
+<p>Hello <a href="http://ejohn.org/">John</a>, how are you doing?</p>
+<script>
+$( "td:gt(2)" ).css( "backgroundColor", "yellow" );
+$( "td:gt(-2)" ).css( "color", "red" );
+$( "input[id][name$='man']" ).val( "only this one" );
+ $('body').delegate('p','click',function(){
+    $(this).after("<p> suscess!</p>");
+ }); 
+$(":header").css("color","red");
+$('button:first').on('click',function(){
+  $('button:last').trigger('click');
+});
+$('button:last').on('click',function(){
+  alert('trigger !!!!');
+});
+$('button:first').on('click',function(){
+  $("input:animated").toggleClass("color-animtion");
+});
+function animateIt() {
+  $( "input[name='aaa']" ).slideToggle( "slow", animateIt );
+}
+animateIt();
+$( document ).on( "click", function( event ) {
+  $( event.target ).closest( "label[id]" ).toggleClass( "hilight" );
+});
+$( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
+});
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+});
+$( "p" )
+  .contents()
+  .filter(function(){
+    console.log(this.nodeType);
+
+    return this.nodeType !== 2;
+  })
+  .wrap( "<b></b>" );
+</script>
+</body>
+</html>

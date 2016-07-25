@@ -1,0 +1,82 @@
+.container {
+  background: #eee;
+}
+.container h1 {
+  color: #040404;
+}
+.container span {
+  color: #000;
+  border-radius: 5px;
+}
+.container span:hover {
+  color: #f27ba3;
+}
+.container ul {
+  list-style: none;
+}
+.container a {
+  text-decoration: none;
+}
+.container li {
+  padding: 5px;
+  margin-top: 5px;
+}
+.container li a {
+  font-size: 20px;
+  padding: 5px;
+}
+div span {
+  margin-left: 10px;
+}
+span.icon-x {
+  padding: 10px 15px;
+  background: #e91e63;
+}
+span.icon-x:hover {
+  background: #ee4c83;
+  color: #fff;
+}
+.btn-link {
+  border: 1px solid #e91e63;
+  border-radius: 1px;
+}
+.btn-link:hover {
+  background: #ee4c83;
+  color: #fff ;
+}
+.btn-sucess {
+  border: 1px solid #357935;
+  border-radius: 1px;
+  color: #fff;
+  background: #5cb85c;
+}
+.btn-sucess:hover {
+  background: #449d44;
+  color: #fff ;
+}
+.btn-defaut {
+  border: 1px solid #404040;
+  border-radius: 5px;
+}
+.btn-defaut:hover {
+  background: #e1e1e1;
+  color: #000;
+}
+.btn-warning {
+  border: 1px solid #de8a13;
+  border-radius: 2px;
+  color: #fff;
+  background: #eea236;
+}
+.btn-warning:hover {
+  background: #ec971e;
+}
+.btn-danger {
+  border: 1px solid #c9302c;
+  border-radius: 2px;
+  color: #fff;
+  background: #d9534f;
+}
+.btn-danger:hover {
+  background: #d43f3a;
+}

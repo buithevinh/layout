@@ -1,0 +1,56 @@
+.container{
+  h1{
+       font-size: 25px;
+       color:#E45456;
+ }
+  p{
+       font-size: 25px;
+       color:#3C7949;
+  }
+
+ .myclass{
+  h1{
+        font-size: 25px;
+        color:#E45456;
+  }
+  p{
+      content: @@var;
+       font-size: 25px;
+       color:#3C7949;
+
+  }
+ }
+}
+@fnord: "I am fnord.";
+@var: 'fnord';
+.bordered {
+  .float {
+    float: left;
+  }
+  &.top {
+    margin: 5px;
+  }
+}
+.color-animtion{
+  background:@base;
+}
+#header        { color: black;
+  .navigation  { font-size: 12px }
+  .logo        { width: 300px;
+    &:hover    { text-decoration: none;
+                color:lighten(@base,20%);
+                background-color: spin(hsl(80, 90%, 20%),-50%);
+                }
+  }
+  .test{
+  shape-outside: circle(50%);
+ float:left;
+  width: 200px;
+  height: 200px;
+  }
+}
+@base: #3C7949;
+
+.hilight{
+  background:@base;
+}

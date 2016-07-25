@@ -1,0 +1,49 @@
+.container h1 {
+  font-size: 25px;
+  color: #E45456;
+}
+.container p {
+  font-size: 25px;
+  color: #3C7949;
+}
+.container .myclass h1 {
+  font-size: 25px;
+  color: #E45456;
+}
+.container .myclass p {
+  content: "I am fnord.";
+  font-size: 25px;
+  color: #3C7949;
+}
+.bordered .float {
+  float: left;
+}
+.bordered.top {
+  margin: 5px;
+}
+.color-animtion {
+  background: #3C7949;
+}
+#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+#header .logo:hover {
+  text-decoration: none;
+  color: #67b478;
+  background-color: #613305;
+}
+#header .test {
+  shape-outside: circle(50%);
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+.hilight {
+  background: #3C7949;
+}
