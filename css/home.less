@@ -23,6 +23,30 @@
     font-size: 20px;
     padding: 5px;
   }
+  ul{
+    display: inline-block;
+  }
+  .list li {
+    float: left;
+  }
+  .content{
+    width: 250px;
+    .background-btn(@color: #dd4587);
+    .border-line(@color: darken(#dd4587,20%),@radius:10px);
+    .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
+    h2{
+      text-align: center;
+      border-bottom: 1px solid #fff; 
+      .mixin();
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    p{
+      text-align: center;
+      .mixin();
+    }
+  }
 }
 div span{
   margin-left: 10px;
@@ -34,6 +58,10 @@ div span{
             .mixin();
             }
 }
+.box-shadown(@positon: 2px 2px 2px 2px ,@color:#fff ){
+box-shadow: @positon @color;
+}
+
 @background:#e91e63;
 .background-btn(@color: #fff){
 background: @color;
@@ -85,3 +113,31 @@ color:@color;
     background:darken(#d9534f,5%);
   };
 }
+
+@var :red;
+div{p{
+    color: @var;
+  }}
+#text{
+  @var :#000;
+  color: @var;
+}
+@detached-ruleset: { 
+    .mixin(){
+    color:blue; // this variable is private
+  }
+};
+.caller {
+    @detached-ruleset();
+    .mixin(); // syntax error
+}
+@import "lib.less";
+@base-color: red;
+.cal{
+  background: @dark-color;
+  color: @base-color;
+}
+link:hover:visited {
+  color: blue;
+}
+.selector:extend(link:hover:visited) {}

@@ -25,6 +25,31 @@
   font-size: 20px;
   padding: 5px;
 }
+.container ul {
+  display: inline-block;
+}
+.container .list li {
+  float: left;
+}
+.container .content {
+  width: 250px;
+  background: #dd4587;
+  border: 1px solid #9f1d55;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px 1px #9f1d55;
+}
+.container .content h2 {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.container .content p {
+  text-align: center;
+  color: #fff;
+}
 div span {
   margin-left: 10px;
 }
@@ -79,4 +104,21 @@ span.icon-x:hover {
 }
 .btn-danger:hover {
   background: #d43f3a;
+}
+div p {
+  color: red;
+}
+#text {
+  color: #000;
+}
+.caller {
+  color: blue;
+}
+.cal {
+  background: #cc0000;
+  color: red;
+}
+link:hover:visited,
+.selector {
+  color: blue;
 }
