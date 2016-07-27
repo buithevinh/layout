@@ -1,0 +1,10 @@
+doctype html
+meta(http-equiv="content-type", content="#{contentType}; charset=UTF-8")
+extends extend
+block append header
+block content
+  ul.list
+   each val in [1, 2, 3, 4, 5]
+      li san pham#{val}
+block content1
+block append footer
