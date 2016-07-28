@@ -47,3 +47,30 @@
 .hilight {
   background: #3C7949;
 }
+.slider {
+  width: 6000px;
+  height: 300px;
+  overflow: hidden;
+  margin-left: 20%;
+  position: relative;
+}
+.slider a {
+  text-decoration: none;
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+  height: 100%;
+  position: absolute;
+}
+.slide-1 {
+  margin-left: -720px;
+  background: #2b5734;
+}
+.slide-2 {
+  margin-left: 720px;
+  background: #4d9b5e;
+}
+.slide-3 {
+  background: #3C7949;
+}
