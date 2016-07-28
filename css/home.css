@@ -122,3 +122,11 @@ link:hover:visited,
 .selector {
   color: blue;
 }
+.inline div {
+  display: inline-block;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 1px red;
+}

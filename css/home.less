@@ -141,3 +141,14 @@ link:hover:visited {
   color: blue;
 }
 .selector:extend(link:hover:visited) {}
+.box-shadow-arg(@x:0 ,@y : 0 ,@blur:1px,@color: red){
+box-shadow: @arguments;
+}
+.inline div{
+  display: inline-block;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  .box-shadow-arg(2px,2px);
+}

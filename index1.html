@@ -35,6 +35,19 @@
 <label id='sss' name='label'>ABCD</label>
 <label id='sss' name='label'>ABCD</label>
 <p>Hello <a href="http://ejohn.org/">John</a>, how are you doing?</p>
+
+<div  class="slider">
+    <li class="slide-1" >
+      <a href="#">Slider</a>
+    </li>
+    <li class="slide-2">
+      <a href="#">Slider1</a>
+    </li>
+    <li class="slide-3">
+      <a href="#">slider2</a>
+    </li>
+</div>
+
 <script>
 $( "td:gt(2)" ).css( "backgroundColor", "yellow" );
 $( "td:gt(-2)" ).css( "color", "red" );
@@ -55,7 +68,7 @@ $('button:first').on('click',function(){
 function animateIt() {
   $( "input[name='aaa']" ).slideToggle( "slow", animateIt );
 }
-animateIt();
+
 $( document ).on( "click", function( event ) {
   $( event.target ).closest( "label[id]" ).toggleClass( "hilight" );
 });
@@ -79,6 +92,19 @@ $( "p" )
     return this.nodeType !== 2;
   })
   .wrap( "<b></b>" );
+
+  var slder=$('.slide-3')
+  var currentSlide=1;
+   function startSlider() {
+        interval = setInterval(function() {
+            $slder.animate({'margin-left': '-='+720}, 1000, function() {
+                if (++currentSlide === $slides.length) {
+                    currentSlide = 1;
+                    $slder.css('margin-left', 0);
+                }
+            });
+        }, 1);
+    }
 </script>
 </body>
 </html>

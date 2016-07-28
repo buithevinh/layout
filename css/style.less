@@ -54,3 +54,38 @@
 .hilight{
   background:@base;
 }
+.background(@color: @base){
+  background: @color;
+};
+
+.slider{
+  width: 6000px;
+  height: 300px;
+  overflow: hidden;
+  margin-left: 20%;
+  position: relative;
+  a{
+    text-decoration: none;
+  }
+  li{
+    width: 100%;
+     list-style: none;
+     height: 100%;
+     position: absolute;
+  }
+}
+@color : #3C7949;
+.slide{
+  &-1{
+  margin-left: -720px;
+    background: darken(@color,10%);
+
+  }
+  &-2{
+    margin-left: 720px;
+    background: lighten(@color,10%);
+  }
+  &-3{
+    background: @color;
+  }
+}
