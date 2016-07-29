@@ -5,18 +5,32 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script type="text/javascript" src='https://code.jquery.com/jquery-1.10.2.js'></script>
 </head>
 <body class="container">
+<div id="id-popup" class="popup">
+	<div  class="popup-content">
+		<span>&times</span>	
+		<h2>Title</h2>
+		<form>
+			<fieldset>
+				<legend>Infomation</legend>
+				<input type="input" name="Name" placeholder="Name">
+				<input type="input" name="old" placeholder="Old">
+			</fieldset>
+		</form>
+	</div>
+</div>
 	<div >
 		<h1>Icon </h1>
 		<div>
 			<span class="icon-x">X</span>
-			<span class="fa fa-times fa-2x"></span>
-			<span class="fa fa-dot-circle-o fa-2x"></span>
-			<span class="fa fa-flag fa-2x"></span>
-			<span class="fa fa-cog fa-2x"></span>
-			<span class="fa fa-calendar fa-2x"></span>
-			<span class="fa fa-trash fa-2x"></span>
+			<span class="icon fa fa-times fa-2x"></span>
+			<span class="icon fa fa-dot-circle-o fa-2x"></span>
+			<span class="icon fa fa-flag fa-2x"></span>
+			<span class="icon fa fa-cog fa-2x"></span>
+			<span class="icon fa fa-calendar fa-2x"></span>
+			<span class="icon fa fa-trash fa-2x"></span>
 		</div>
 	</div>
 	<div>	
@@ -46,16 +60,50 @@
 				<h2>Title</h2>
 				<p>You are about to delete the selected entries. Please confirm the deletion. You are about to delete the selected entries. Please confirm the deletion. You are about to delete the selected entries. Please confirm the deletion. You are about to delete the selected entries. Please confirm the deletion.</p>
 			</div>
-			<div class="content">
+			<div class="content-2">
 				<h2>Tile2</h2>
 				<p>You are abaaout to delete the selected entries. Please confirm the deletion. You are about to delete the selected entries. Please confirm the deletion. You are aaabout to delete the selected entries. Please confirm the deletion. You are about to delete the selected entries. Please confirm tssaassaasasashe deletion.
 				bùi thế vinh
-				bùi thế vinhassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 				nguyễn trung tín
 				</p>
 			</div>
 	</div>
-</div>   saaddsddadasdsaasd
-asdasda
+	<p></p>
+	<div >
+		<h1>List View</h1>
+		<div class="list-view">
+			<ul>
+				<li class="li-view">
+					<a href=""><span>Something do it Eat</span></a>
+				</li>
+				<li class="li-view">
+					<a href=""><span>Something do it Sleep</span></a>
+				</li>
+				<li class="li-view">
+					<a href=""><span>Something do it Code</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div> 
+
 </body>
+<script type="text/javascript">
+	$("li.li-view").on("click",function(){
+		$(".popup").css("display","block");
+	});
+
+	$(".popup-content span").on("click",function(){
+		$(".popup").css("display","none");
+	});
+	var model=document.getElementById('popup');
+	window.onclick = function(event) {
+		//  
+		console.log(event.target.id);
+    if (event.target.id == $("#id-popup").attr("id")) {
+    $(".popup").css("display","none");
+    }
+}
+
+</script>
 </html>

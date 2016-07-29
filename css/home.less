@@ -3,12 +3,7 @@
   h1{
     color:#040404;
   }
-  span{
- .mixin(@color: #000);
-  border-radius:5px;
-   &:hover {color:lighten(#e91e63,20%);
-            }
-  }
+
   ul{
     list-style: none;
   }
@@ -29,10 +24,20 @@
   .list li {
     float: left;
   }
+ span.icon{
+    &:hover{
+      color:lighten(#dd4587,10%);
+    };
+ }
   .content{
     width: 250px;
-    .background-btn(@color: #dd4587);
+    .background-bdg(@color: #dd4587);
     .border-line(@color: darken(#dd4587,20%),@radius:10px);
+    max-height: 300px;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 5px;
+    margin-left: 10px;
     .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
     h2{
       text-align: center;
@@ -47,12 +52,21 @@
       .mixin();
     }
   }
+
 }
+ .content-2:extend(.container .content ){ 
+      background: #fff ;
+      p:extend(.container .content p ){.mixin(#dd4587) };
+      h2:extend(.container .content h2){.mixin(#dd4587) ;
+                                        border-bottom: 1px solid #dd4587 ; 
+                                        };
+  }
 div span{
   margin-left: 10px;
 }
  span.icon-x{
   padding:10px 15px;
+  border-radius: 5px;
   background: @background;
    &:hover {background:lighten(#e91e63,10%);
             .mixin();
@@ -63,7 +77,7 @@ box-shadow: @positon @color;
 }
 
 @background:#e91e63;
-.background-btn(@color: #fff){
+.background-bdg(@color: #fff){
 background: @color;
 }
 @color:#00a1e5;
@@ -84,7 +98,7 @@ color:@color;
 .btn-sucess{
    .border-line(@color:darken(#5cb85c,20%),@radius:1px);
   .mixin();
-  .background-btn(@color:#5cb85c);
+  .background-bdg(@color:#5cb85c);
   &:hover{
     background: darken(#5cb85c,10%);
     color: #fff ;
@@ -100,7 +114,7 @@ color:@color;
 .btn-warning{
   .border-line(@color: darken(#eea236,10%),@radius: 2px);
   .mixin();
-  .background-btn(@color: #eea236);
+  .background-bdg(@color: #eea236);
   &:hover{
     background:darken(#eea236,5%);
   };
@@ -108,7 +122,7 @@ color:@color;
 .btn-danger{
    .border-line(@color: darken(#d9534f,10%),@radius: 2px);
   .mixin();
-  .background-btn(@color: #d9534f);
+  .background-bdg(@color: #d9534f);
   &:hover{
     background:darken(#d9534f,5%);
   };
@@ -144,11 +158,85 @@ link:hover:visited {
 .box-shadow-arg(@x:0 ,@y : 0 ,@blur:1px,@color: red){
 box-shadow: @arguments;
 }
-.inline div{
-  display: inline-block;
-}
+
 .box{
   width: 200px;
   height: 200px;
   .box-shadow-arg(2px,2px);
+}
+.inline{
+  display: inline-block;
+}
+.list-view{
+  width: 40%;
+  ul{
+    display:  block;
+  }
+  margin-left: 15%;
+  .li-view{
+    .li-view();
+    width: 100%;
+    padding: 0;
+      .border-line(@color:darken(#dd4587,20%),@radius:2px);
+    a{
+      span{
+        .mixin();
+      }
+      .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
+      &:hover{
+        background: darken(#dd4587,10%);
+
+      };
+      display: block;
+      }
+    }
+}
+.li-view(@background: #dd4587,@color: #fff){
+color: @color;
+background: @background;
+}
+.popup{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  display: block;
+  overflow: auto;
+  background: rgba(0,0,0,0.4);
+  .popup-content{
+    position: absolute;
+    background: #dd4587;
+    margin-left:20%;
+    padding: 20px;
+    width: 60%;
+    z-index: 1;
+    top: 200px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.7s;
+    .border-line(@color:darken(#dd4587,20%),@radius:2px);
+   .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
+    span{
+      position: absolute;
+      right: 10px;
+      font-weight: bold;
+      margin-top: -20px;
+      font-size: 30px;
+      .mixin(#fff);
+      &:hover{ 
+        .mixin(#000);
+      };
+    }
+  }
+}
+@-webkit-keyframes animatetop {
+    from {top: -100px; opacity: 0} 
+    to {top: 200px; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -100px; opacity: 0}
+    to {top: 200px; opacity: 1}
 }
