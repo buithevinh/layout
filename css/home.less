@@ -14,10 +14,6 @@
     padding: 5px;
     margin-top: 5px;
   }
-  li a{
-    font-size: 20px;
-    padding: 5px;
-  }
   ul{
     display: inline-block;
   }
@@ -95,7 +91,12 @@ color:@color;
     color: #fff ;
   }
 }
+.font-a(){
+  font-size: 20px;
+    padding: 5px;
+}
 .btn-sucess{
+   .font-a();
    .border-line(@color:darken(#5cb85c,20%),@radius:1px);
   .mixin();
   .background-bdg(@color:#5cb85c);
@@ -105,6 +106,7 @@ color:@color;
   }
 }
 .btn-defaut{
+   .font-a();
   .border-line(@color:#404040,@radius:5px);
   &:hover{
     background: darken(#eee,5%);
@@ -112,6 +114,7 @@ color:@color;
   };
 }
 .btn-warning{
+   .font-a();
   .border-line(@color: darken(#eea236,10%),@radius: 2px);
   .mixin();
   .background-bdg(@color: #eea236);
@@ -122,6 +125,7 @@ color:@color;
 .btn-danger{
    .border-line(@color: darken(#d9534f,10%),@radius: 2px);
   .mixin();
+  .font-a();
   .background-bdg(@color: #d9534f);
   &:hover{
     background:darken(#d9534f,5%);
@@ -194,23 +198,26 @@ box-shadow: @arguments;
 .li-view(@background: #dd4587,@color: #fff){
 color: @color;
 background: @background;
+a{
+   .font-a();
+}
 }
 .popup{
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0px;
   left: 0;
-  display: block;
   overflow: auto;
+   z-index: 1;
   background: rgba(0,0,0,0.4);
   .popup-content{
     position: absolute;
     background: #dd4587;
-    margin-left:20%;
+    margin-left:30%;
     padding: 20px;
-    width: 60%;
-    z-index: 1;
+    width: 40%;
     top: 200px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -227,9 +234,42 @@ background: @background;
       .mixin(#fff);
       &:hover{ 
         .mixin(#000);
-      };
+      };  
     }
-  }
+    h2{
+      text-align: center;
+      .mixin();
+    }
+    label{
+      .mixin();
+    }
+    .form{
+      margin-bottom: 15px;
+    }
+    .form-a{
+     float: right;
+      margin-top: 15px;
+    }
+    a{
+      margin-left: 15px;
+    }
+    input{
+       font-size: 14px;
+        padding: 6px 0 6px 12px;
+        .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        border-radius: 4px;
+        .border-line(@color: darken(#dd4587,10%));
+        width: 95%;
+        &:focus{
+              border-color: #66afe9;
+              outline: 0;
+              .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#66afe9,20%));
+        };
+      }
+    }
 }
 @-webkit-keyframes animatetop {
     from {top: -100px; opacity: 0} 

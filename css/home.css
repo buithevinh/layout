@@ -14,10 +14,6 @@
   padding: 5px;
   margin-top: 5px;
 }
-.container li a {
-  font-size: 20px;
-  padding: 5px;
-}
 .container ul {
   display: inline-block;
 }
@@ -85,6 +81,8 @@ span.icon-x:hover {
   color: #fff ;
 }
 .btn-sucess {
+  font-size: 20px;
+  padding: 5px;
   border: 1px solid #357935;
   border-radius: 1px;
   color: #fff;
@@ -95,6 +93,8 @@ span.icon-x:hover {
   color: #fff ;
 }
 .btn-defaut {
+  font-size: 20px;
+  padding: 5px;
   border: 1px solid #404040;
   border-radius: 5px;
 }
@@ -103,6 +103,8 @@ span.icon-x:hover {
   color: #000;
 }
 .btn-warning {
+  font-size: 20px;
+  padding: 5px;
   border: 1px solid #de8a13;
   border-radius: 2px;
   color: #fff;
@@ -115,6 +117,8 @@ span.icon-x:hover {
   border: 1px solid #c9302c;
   border-radius: 2px;
   color: #fff;
+  font-size: 20px;
+  padding: 5px;
   background: #d9534f;
 }
 .btn-danger:hover {
@@ -161,6 +165,10 @@ link:hover:visited,
   border-radius: 2px;
 }
 .list-view .li-view a {
+  font-size: 20px;
+  padding: 5px;
+}
+.list-view .li-view a {
   box-shadow: 0px 1px 10px 1px #9f1d55;
   display: block;
 }
@@ -171,27 +179,27 @@ link:hover:visited,
   background: #ca256d;
 }
 .popup {
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0px;
   left: 0;
-  display: block;
   overflow: auto;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.4);
 }
 .popup .popup-content {
   position: absolute;
   background: #dd4587;
-  margin-left: 20%;
+  margin-left: 30%;
   padding: 20px;
-  width: 60%;
-  z-index: 1;
+  width: 40%;
   top: 200px;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   border: 1px solid #9f1d55;
   border-radius: 2px;
   box-shadow: 0px 1px 10px 1px #9f1d55;
@@ -206,6 +214,40 @@ link:hover:visited,
 }
 .popup .popup-content span:hover {
   color: #000;
+}
+.popup .popup-content h2 {
+  text-align: center;
+  color: #fff;
+}
+.popup .popup-content label {
+  color: #fff;
+}
+.popup .popup-content .form {
+  margin-bottom: 15px;
+}
+.popup .popup-content .form-a {
+  float: right;
+  margin-top: 15px;
+}
+.popup .popup-content a {
+  margin-left: 15px;
+}
+.popup .popup-content input {
+  font-size: 14px;
+  padding: 6px 0 6px 12px;
+  box-shadow: 0px 1px 10px 1px #9f1d55;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ca256d;
+  border-radius: 2px;
+  width: 95%;
+}
+.popup .popup-content input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: 0px 1px 10px 1px #1d7ecc;
 }
 @-webkit-keyframes animatetop {
   from {

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<script type="text/javascript" src='https://code.jquery.com/jquery-1.10.2.js'></script>
+	 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body class="container">
 <div id="id-popup" class="popup">
@@ -13,12 +14,17 @@
 		<span>&times</span>	
 		<h2>Title</h2>
 		<form>
-			<fieldset>
-				<legend>Infomation</legend>
-				<input type="input" name="Name" placeholder="Name">
-				<input type="input" name="old" placeholder="Old">
-			</fieldset>
+				<div class="form">
+					<label>Email: </label> <input type="input" name="email" placeholder="Email">
+				</div>
+				<div class="form">
+					<label>Password: </label><input type="password" name="password" placeholder="Password">
+				</div>
 		</form>
+		<div class="form-a">
+			<a class="btn-sucess" href="#">Login</a>
+			<a class="btn-danger" href="#">Cancel</a>
+		</div>
 	</div>
 </div>
 	<div >
@@ -74,13 +80,13 @@
 		<div class="list-view">
 			<ul>
 				<li class="li-view">
-					<a href=""><span>Something do it Eat</span></a>
+					<a href="#"><span>Something do it Eat</span></a>
 				</li>
 				<li class="li-view">
-					<a href=""><span>Something do it Sleep</span></a>
+					<a href="#"><span>Something do it Sleep</span></a>
 				</li>
 				<li class="li-view">
-					<a href=""><span>Something do it Code</span></a>
+					<a href="#"><span>Something do it Code</span></a>
 				</li>
 			</ul>
 		</div>
@@ -89,21 +95,22 @@
 
 </body>
 <script type="text/javascript">
-	$("li.li-view").on("click",function(){
+	$(".li-view").on("click",function(){
 		$(".popup").css("display","block");
 	});
 
 	$(".popup-content span").on("click",function(){
 		$(".popup").css("display","none");
 	});
-	var model=document.getElementById('popup');
-	window.onclick = function(event) {
-		//  
-		console.log(event.target.id);
-    if (event.target.id == $("#id-popup").attr("id")) {
-    $(".popup").css("display","none");
-    }
-}
+	$(window).on("click",function(event){
+		if(event.target.id==$(".popup").attr("id")){
+			$(".popup").css("display","none");
+		}
+	});
+ $( function() {
+    $( ".btn-danger" ).draggable();
+    $(".content-2").draggable();
+  } );
 
 </script>
 </html>
