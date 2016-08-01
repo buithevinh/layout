@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<script type="text/javascript" src='https://code.jquery.com/jquery-1.10.2.js'></script>
 	 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	 <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+ 	 <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
 </head>
 <body class="container">
 <div id="id-popup" class="popup">
@@ -59,7 +61,7 @@
 			</li>
 		</ul>
 	</div>
-	<div>
+	<div style="position:relative;">
 	<div class="inline">
 		<h1>Layer 1 </h1>
 			<div class="content">
@@ -91,8 +93,26 @@
 			</ul>
 		</div>
 	</div>
+	<div>
+		<h1>Slide</h1>
+		<div class="your-class">
+		  	<li class="li-1">
+		  		slider1
+		  	</li>
+		  	<li class="li-2">
+		  		slider2
+		  	</li>
+		  	<li class="li-3">
+		  		slider3
+		  	</li>
+		</div>
+	</div>
+	<div class="footer">
+		
+	</div>
 </div> 
 
+ <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
 </body>
 <script type="text/javascript">
 	$(".li-view").on("click",function(){
@@ -111,6 +131,9 @@
     $( ".btn-danger" ).draggable();
     $(".content-2").draggable();
   } );
+$(document).ready(function(){
+  $('.your-class').slick();
+});
 
 </script>
 </html>

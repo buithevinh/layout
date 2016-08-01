@@ -280,3 +280,43 @@ a{
     from {top: -100px; opacity: 0}
     to {top: 200px; opacity: 1}
 }
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background: #dd4587;
+    padding: 10px;
+    margin-left: -10px;
+    .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
+}
+.your-class{
+  width: 720px;
+  height: 300px;
+  margin-left: 30%;
+  margin-bottom: 60px;
+  .box-shadown(@positon: 0px 1px 10px 1px,@color:darken(#dd4587,20%));
+  button{
+    &::before{
+    color: #9f1d55;
+    }
+  }
+  li{
+    margin: 0;
+  }
+  div{
+      height: 300px;
+    }
+  .li{
+    &-1{
+    background: lighten(#66afe9,10%);
+  }
+    &-2{
+      background: darken(#66afe9,10%);
+    }
+    &-3{
+      background:#66afe9;
+    }
+
+  }
+}
